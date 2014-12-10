@@ -15,13 +15,12 @@
     var modal = this;
     var options = $.extend({}, defaultOptions, options);
     var $modal = $(options.template);
-    var $modalCloseBtn = $modal.find('.fa-modal__close-btn');
     var $modalContentContainer = $modal.find('.fa-modal__content-container');
 
     $modal.appendTo('body');
     $modalContentContainer.html($modalContent);
 
-    $modal.add($modalCloseBtn).on('click', function () {
+    $modal.add('.fa-modal__close-btn', $modal).on('click', function () {
       $modal.trigger('hide');
     });
     $modalContent.on('click', function (e) {
