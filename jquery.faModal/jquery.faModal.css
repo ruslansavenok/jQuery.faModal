@@ -1,0 +1,83 @@
+﻿/* -------------------------------------------------------
+    Layout Setup. Wrap All Body Content into
+    <div class="fa-modal__page"></div>
+   ------------------------------------------------------- */
+html,
+body,
+.fa-modal__page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: hidden;
+}
+.fa-modal__page {
+  overflow: auto;
+}
+
+
+/* -------------------------------------------------------
+    Modal Windows
+   ------------------------------------------------------- */
+.fa-modal__overlay {
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.55);
+}
+.fa-modal__content-container {
+  padding: 50px 0;
+  top: -100%;
+  position: relative;
+  -webkit-transition: top 0.2s ease-out;
+          transition: top 0.2s ease-out;
+}
+.fa-modal__close-btn {
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  background: #f2f2f2;
+  color: #d45e4d;
+  text-align: center;
+  line-height: 27px;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+}
+.fa-modal__close-btn:before {
+  content: "×";
+}
+
+/*  Modal Content
+ */
+.fa-modal {
+  position: relative;
+  background: #fff;
+  display: none;
+  margin: 0 auto;
+  width: 60%;
+  padding: 15px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+.fa-modal__content-container .fa-modal {
+  display: block;
+}
+
+/*  Show Modal
+ */
+.fa-modal__overlay_visible .fa-modal__content-container {
+  top: 0;
+}
