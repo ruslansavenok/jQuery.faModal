@@ -6,7 +6,7 @@ Modal Windows Plugin, that doesn't suck with scrollbars. It's small and easy to 
 Check out the [Demo](https://dl.dropboxusercontent.com/u/18659172/code/jquery.famodal/demo/index.html)
 
 
-**Initialization**
+##### Initialization
 ```html
 <script src="jquery.js"></script>
 <link rel="stylesheet" href="jquery.faModal.css" />
@@ -22,7 +22,7 @@ Check out the [Demo](https://dl.dropboxusercontent.com/u/18659172/code/jquery.fa
 ```
 
 
-**Modal Content Markup**
+##### Modal Content Markup
 ```html
 <div class="fa-modal my-modal">
   <div class="fa-modal__close-btn"></div>
