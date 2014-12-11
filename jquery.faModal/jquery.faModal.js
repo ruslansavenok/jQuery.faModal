@@ -29,7 +29,10 @@
 
     $modal.on({
       show: function () {
-        $modal.fadeIn().addClass('fa-modal__overlay_visible');
+        $modal
+          .fadeIn()
+          .addClass('fa-modal__overlay_visible')
+          .focus();
       },
       hide: function () {
         $modal.fadeOut().removeClass('fa-modal__overlay_visible');
