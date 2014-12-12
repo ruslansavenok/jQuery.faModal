@@ -12,7 +12,6 @@
   /*  Modal Class
    */
   var Modal = function ($modalContent, options) {
-    var modal = this;
     var options = $.extend({}, defaultOptions, options);
     var $modal = $(options.template);
     var $modalContentContainer = $modal.find('.fa-modal__content-container');
