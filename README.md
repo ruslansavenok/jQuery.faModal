@@ -39,3 +39,19 @@ Requires extra markup in your html to prevent 2 scrollbars if modal content is t
   </div>
 </body>
 ```
+
+If you have `min-width`, `padding`, `margin`, etc on page `body {}`, you will need to add extra fiv inside `.fa-modal__page` and set it here.
+```html
+<style>
+  .page-min-width-controller {
+    min-width: 1200px;
+  }
+</style>
+<body>
+  <div class="fa-modal__page">
+    <div class="page-min-width-controller">
+      <!-- your page content here -->
+    </div>
+  </div>
+</body>
+```
