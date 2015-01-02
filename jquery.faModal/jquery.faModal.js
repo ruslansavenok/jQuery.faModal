@@ -48,7 +48,7 @@
         $modal.show();
         setTimeout(function () {
           $modal.addClass(options.classes.wrapperAnimate);
-        }, 1);
+        }, 10);
       },
       hide: function () {
         $modal.one('transitionend', function () {
