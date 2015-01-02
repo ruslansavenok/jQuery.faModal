@@ -1,42 +1,39 @@
-﻿/* -------------------------------------------------------
-    Layout Setup. Wrap All Body Content into
-    <div class="fa-modal__page"></div>
-   ------------------------------------------------------- */
-html,
-body,
-.fa-modal__page {
-  height: 100%;
-  margin: 0;
+﻿body {
   padding: 0;
+  margin: 0;
 }
-body {
-  overflow: hidden;
-}
-.fa-modal__page {
-  overflow: auto;
-}
-
 
 /* -------------------------------------------------------
-    Modal Windows
+    Modal Window
    ------------------------------------------------------- */
-.fa-modal__overlay {
+.fa-modal__wrapper {
   display: none;
-  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 99999;
+  height: 100%;
+  z-index: 999999;
   overflow-y: scroll;
-  background: rgba(0, 0, 0, 0.55);
+}
+.fa-modal__centering-outer {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.fa-modal__centering-inner {
+  display: table-cell;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: background-color 0.2s ease-out;
+          transition: background-color 0.2s ease-out;
 }
 .fa-modal__content-container {
-  padding: 50px 0;
-  top: -100%;
+  padding: 50px 20px;
   position: relative;
-  -webkit-transition: top 0.2s ease-out;
-          transition: top 0.2s ease-out;
+  margin-top: -100%;
+  -webkit-transition: margin-top 0.2s ease-out;
+          transition: margin-top 0.2s ease-out;
 }
 .fa-modal__close-btn {
   cursor: pointer;
@@ -57,9 +54,6 @@ body {
 .fa-modal__close-btn:before {
   content: "×";
 }
-
-/*  Modal Content
- */
 .fa-modal {
   position: relative;
   background: #fff;
@@ -67,17 +61,22 @@ body {
   margin: 0 auto;
   width: 60%;
   padding: 15px 30px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.34);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.34);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-border-radius: 10px;
           border-radius: 10px;
 }
-.fa-modal__content-container .fa-modal {
+.fa-modal__wrapper .fa-modal {
   display: block;
 }
 
-/*  Show Modal
+/*  Animate OnShow
  */
-.fa-modal__overlay_visible .fa-modal__content-container {
-  top: 0;
+.fa-modal__wrapper_animate .fa-modal__centering-inner {
+  background: rgba(0, 0, 0, 0.55);
+}
+.fa-modal__wrapper_animate .fa-modal__content-container {
+  margin-top: 0;
 }

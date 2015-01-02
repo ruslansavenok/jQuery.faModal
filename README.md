@@ -3,6 +3,8 @@ jQuery.faModal
 
 Modal Windows Plugin, that doesn't suck with scrollbars. It's small and easy to modify for your project.
 
+**Supports CSS3 browsers only.**
+
 Check out the [Demo](https://dl.dropboxusercontent.com/u/18659172/code/jquery.famodal/demo/index.html)
 
 
@@ -25,34 +27,7 @@ Check out the [Demo](https://dl.dropboxusercontent.com/u/18659172/code/jquery.fa
 ##### Modal Content Markup
 ```html
 <div class="fa-modal my-modal">
-  <div class="fa-modal__close-btn"></div>
-  <-- modal content goes here -->
+  <div class="fa-modal__close-btn"></div> <!-- add if you need close btn -->
+  <!-- modal content goes here -->
 </div>
-```
-
-
-Requires extra markup in your html to prevent 2 scrollbars if modal content is too big.
-```html
-<body>
-  <div class="fa-modal__page">
-    <!-- your page content here -->
-  </div>
-</body>
-```
-
-If you have `min-width`, `padding`, `margin`, etc on page `body {}`, you will need to add extra div inside `.fa-modal__page` and set it here.
-```html
-<style>
-  .page-min-width-controller {
-    min-width: 1200px;
-    margin: 0 10px;
-  }
-</style>
-<body>
-  <div class="fa-modal__page">
-    <div class="page-min-width-controller">
-      <!-- your page content here -->
-    </div>
-  </div>
-</body>
 ```
